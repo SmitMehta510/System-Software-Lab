@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 10.c
+Author : Smit Mehta
+Description : C program to implement lseek functionality.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <fcntl.h>

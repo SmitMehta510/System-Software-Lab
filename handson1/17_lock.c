@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 17.c
+Author : Smit Mehta
+Description : C program to simulate online ticket resevation by using Locking. 
+Date: 29th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

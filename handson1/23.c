@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 23.c
+Author : Smit Mehta
+Description : C program to create zombie state of process.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>

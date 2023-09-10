@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 29.c
+Author : Smit Mehta
+Description : C program to get current scheduling policy and modifing 
+		the scheduling policy.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sched.h>

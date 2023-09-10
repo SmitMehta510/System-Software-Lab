@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 9.c
+Author : Smit Mehta
+Description : C program to display information regarding the given file.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include <sys/stat.h>
 

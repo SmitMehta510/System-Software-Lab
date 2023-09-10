@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 22.c
+Author : Smit Mehta
+Description : C program to modify a file using child process and parent process.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

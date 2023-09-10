@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 5.c
+Author : Smit Mehta
+Description : C program to create 5 new files and check file descriptor table
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

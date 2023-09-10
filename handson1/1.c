@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 1.c
+Author : Smit Mehta
+Description : C program to create sotlink, hardlink and FIFO 
+		types of files
+Date: 17th Aug, 2023.
+============================================================================
+*/
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/types.h>

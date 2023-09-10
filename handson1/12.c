@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 12.c
+Author : Smit Mehta
+Description : C program to find out the opening mode of a file using 
+		fcntl system call.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

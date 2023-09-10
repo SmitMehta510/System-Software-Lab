@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 15.c
+Author : Smit Mehta
+Description : C program to display the environmental variable using environ.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

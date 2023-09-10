@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 20.c
+Author : Smit Mehta
+Description : C program to find priority of the program and modify priority
+		 with nice command
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/resource.h>

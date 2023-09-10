@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 24.c
+Author : Smit Mehta
+Description : C program to create orphan process.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>

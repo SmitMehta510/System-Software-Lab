@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 16.c
+Author : Smit Mehta
+Description : C program to implement mandatory read and write locking.
+Date: 29th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

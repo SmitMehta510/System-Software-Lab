@@ -1,3 +1,12 @@
+/* 
+============================================================================
+Name : 6.c
+Author : Smit Mehta
+Description : C program to take input and show output using read and write system call.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 

@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 30.c
+Author : Smit Mehta
+Description : C program to create a new daemon process and running a script 
+		from the process at a specific given time.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <stdlib.h>

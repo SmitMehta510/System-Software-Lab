@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 13.c
+Author : Smit Mehta
+Description : C program to implement select system call to wait 
+		for 10 seconds for input.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

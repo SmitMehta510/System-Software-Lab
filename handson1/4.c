@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 4.c
+Author : Smit Mehta
+Description : C program to open an existing file in read write mode
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

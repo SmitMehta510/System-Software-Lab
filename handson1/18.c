@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 18.c
+Author : Smit Mehta
+Description : C program to implement record locking in the online 
+				train reservation stem simulation.
+Date: 29th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

@@ -1,5 +1,15 @@
+/*
+============================================================================
+Name : 27.c
+Author : Smit Mehta
+Description : C program to execute ls -Rl command using different exec system calls.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
@@ -12,22 +22,33 @@ int main(int argc, char const *argv[])
 
 	extern char **environ;
 
-	//1
-	//execl(path,path,arg1,arg2,NULL);
+	printf("1. execl\n");
+	printf("2. execlp\n");
+	printf("3. execle\n");
+	printf("4. execv\n");
+	printf("5. execvp\n");
+	int choice;
+	scanf("%d",&choice);
 
-	//2
-	
-	//execlp(file,file,arg1,arg2,NULL);
-
-	//3
-
-	// execle(path,path,arg1,arg2,NULL,environ);
-
-	//4
-	//execv(path,argv);
-
-	//5
-	execvp(file,argv);
+	switch(choice){
+	case 1:
+		execl(path,path,arg1,arg2,NULL);
+		break;
+	case 2:
+		execlp(file,file,arg1,arg2,NULL);	
+		break;
+	case 3:
+		execle(path,path,arg1,arg2,NULL,environ);
+		break;
+	case 4:
+		execv(path,argv);
+		break;
+	case 5: 
+		execvp(file,argv);
+		break;
+	default:
+		exit(0);	
+	}
 
 	return 0;
 }

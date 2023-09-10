@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 3.c
+Author : Smit Mehta
+Description : C program to create a new file using creat system call
+Date: 17th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

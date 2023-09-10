@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 11.c
+Author : Smit Mehta
+Description : C program to implement dup, dup2 and using fcntl to duplicate
+		 file descriptors and manipulate the file.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

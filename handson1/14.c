@@ -1,3 +1,12 @@
+/*
+============================================================================
+Name : 14.c
+Author : Smit Mehta
+Description : C program to find the type of a file in linux.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/stat.h>

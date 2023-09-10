@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 8.c
+Author : Smit Mehta
+Description : C program to read from a file line by line and display 
+		each line after reading.
+Date: 25th Aug, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include <sys/types.h>

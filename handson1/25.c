@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 25.c
+Author : Smit Mehta
+Description : C program to create 3 child process using fork and use waitpid
+	 system call for parent to wait for child execution to be completed.
+Date: 8th Sept, 2023.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
