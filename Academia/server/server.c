@@ -1,6 +1,8 @@
 #include "../headers.h"
 #include "admin.c"
 #include "login.c"
+#include "student.c"
+#include "faculty.c"
 
 #define MAX_PENDING 5
 
@@ -48,63 +50,57 @@ void tcpData(){
         if(processId ==0){
             char buff[] = "----------Welcome to Academia ----------\n"
                         "Choose login type \n"
-                        "1. Admin\t 2. Faculty\t 3. Student\n";
+                        "1. Admin\t 2. Student\t 3. Faculty\n";
             int bytesSend = send(connectsd,&buff,sizeof(buff),0);
             int recvBytes = recv(connectsd,&string,sizeof(string),0);
             choice = atoi(string);
-            //int wr = write(0,&choice,sizeof(choice));
-            
-            char buffer[100];
-            // //login data
-            // struct loginInfo linfo;
-            // memset(&linfo,0,sizeof(linfo));
-            
-            // linfo.usertype = choice;
-            // char msg[] = "Enter username :";
-            // send(connectsd,&msg,sizeof(msg),0);
-            // // int endbyte = recv(connectsd,&buffer,sizeof(buffer),0);
-            // // memcpy(linfo.uname,buffer,endbyte);
+        
+            char error[] ="Invalid credentials. Try again";
+            char username[30],password[30];
+            bzero(password,sizeof(password));
+            bzero(username,sizeof(username));
+            int Id;
+            char msg[30];
+            if(choice!=1){
+                strcpy(msg,"Enter User Id");
+                send(connectsd,&msg,strlen(msg),0);
+                recv(connectsd,&username,sizeof(username),0);
+                memset(&msg,0,sizeof(msg));
 
-            // bzero(buffer,sizeof(buffer));
-            // strcpy(msg,"Enter password :");
-            // send(connectsd,&msg,sizeof(msg),0);
-            // // endbyte = recv(connectsd,&buffer,sizeof(buffer),0);
-            // // memcpy(linfo.password,buffer,endbyte);
+                strcpy(msg,"Enter Password");
+                send(connectsd,&msg,strlen(msg),0);
+                recv(connectsd,&password,sizeof(password),0);
+                memset(&msg,0,sizeof(msg));
 
-            // printf("uname = %s\n",linfo.uname);
-            // printf("password = %s\n",linfo.password);
-            
-
-            // struct loginInfo info;
-            // memset(&info,0,sizeof(struct loginInfo));
-            // int file = open("logininfo.txt",O_RDONLY | O_CREAT,0744);
-
-            // int dataread = read(file,&info,sizeof(struct loginInfo));
-
-
-            // printf("choice: %d\n",info.usertype == linfo.usertype);
-            // printf("%d \n",strcmp(info.uname,linfo.uname));
-            // printf("%d \n",strcmp(info.password,linfo.password));
-
-            // printf("%d\n",login(linfo.usertype,linfo.uname,linfo.password));
+                Id = atoi(username);
+            }
+            char buffer[30];
             switch (choice)
             {
                 case 1:
                     adminFunctions(connectsd);
-                    // viewAllStudentDetails(connectsd);
-                    // viewStudentDetails(connectsd);
                     break;
                 case 2:
+                    if(studentLogin(Id,password)){
+                        studentFunctions(connectsd,Id);
+                    }else{
+                        send(connectsd,&error,strlen(error),0);
+                    }
                     break;
                 case 3:
+                    if(facultyLogin(Id,password)){
+                        facultyFunctions(connectsd,Id);
+                    }else{
+                        send(connectsd,&error,strlen(error),0);
+                        shutdown(connectsd,SHUT_RDWR);
+                        close(connectsd);
+                    }
                     break;
                 default:
                     exit(0);
                     break;
             }
-
         }
-
         close(connectsd);
 
     }
@@ -116,8 +112,10 @@ void tcpData(){
 
 int main(int argc, char const *argv[])
 {
-    //saveinfo();
     tcpData();
+
+    //viewAllEnrollments();
+    //studentFunctions(1,1);
     return 0;
 }
 
